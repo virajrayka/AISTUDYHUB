@@ -1,0 +1,565 @@
+/* =========================================
+   AI STUDYHUB — PREMIUM COURSE PAGE FIX
+   ========================================= */
+
+.premium-course-page {
+  --premium-violet: #5b4ee8;
+  --premium-violet-dark: #4938d1;
+  --premium-violet-light: #f0eeff;
+  --premium-text: #20283a;
+  --premium-muted: #6b7280;
+  --premium-border: #e7e3dc;
+
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 8px 0 40px;
+  color: var(--premium-text);
+}
+
+.premium-course-page .premium-course-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 1fr);
+  gap: 20px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+.premium-course-page .premium-lesson-card,
+.premium-course-page .premium-syllabus-card,
+.premium-course-page .premium-unlock-card {
+  min-width: 0;
+  padding: 26px;
+  background: #fff;
+  border: 1px solid var(--premium-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(31, 41, 55, 0.035);
+}
+
+.premium-course-page .premium-lesson-card > h2 {
+  margin: 12px 0 18px;
+  color: var(--premium-text);
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.3;
+}
+
+.premium-course-page .premium-lesson-card > p {
+  margin: 16px 0;
+  color: #374151;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.premium-course-page .premium-lesson-card > h3 {
+  margin: 24px 0 12px;
+  font-size: 20px;
+}
+
+.premium-course-page .premium-lesson-card ul {
+  padding-left: 24px;
+  margin: 16px 0 22px;
+  line-height: 1.8;
+}
+
+.premium-course-page .course-category {
+  display: inline-flex;
+  align-items: center;
+  color: var(--premium-violet);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Buttons */
+
+.premium-course-page .primary-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 46px;
+  padding: 12px 20px;
+  color: #fff;
+  background: var(--premium-violet);
+  border: 1px solid var(--premium-violet);
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.premium-course-page .primary-btn:hover {
+  background: var(--premium-violet-dark);
+  transform: translateY(-1px);
+}
+
+.premium-course-page button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Previous / Next lesson */
+
+.premium-course-page .premium-course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid #eeeaf5;
+}
+
+.premium-course-page .premium-course-footer button {
+  padding: 9px 4px;
+  color: var(--premium-violet);
+  background: transparent;
+  border: 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.premium-course-page .premium-course-footer button:disabled {
+  color: #9ca3af;
+}
+
+/* Course syllabus */
+
+.premium-course-page .premium-syllabus-card h2 {
+  margin: 0 0 20px;
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+.premium-course-page .premium-syllabus-item {
+  display: block;
+  width: 100%;
+  margin: 0 0 9px;
+  padding: 14px;
+  color: #374151;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.premium-course-page .premium-syllabus-item:hover {
+  background: #faf9ff;
+  border-color: #ddd6fe;
+}
+
+.premium-course-page .premium-syllabus-item.is-active {
+  color: var(--premium-violet-dark);
+  background: var(--premium-violet-light);
+  border-color: #c4b5fd;
+  font-weight: 700;
+}
+
+.premium-course-page .premium-syllabus-item.is-complete {
+  border-color: #d1fae5;
+}
+
+.premium-course-page .premium-progress {
+  margin-top: 22px;
+}
+
+.premium-course-page .premium-progress-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.premium-course-page .premium-progress-heading strong {
+  color: var(--premium-violet);
+}
+
+.premium-course-page .premium-progress-track {
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+  background: #ece9f6;
+  border-radius: 99px;
+}
+
+.premium-course-page .premium-progress-track span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #5b4ee8, #9b8cff);
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.premium-course-page .premium-progress-caption {
+  margin: 12px 0;
+  color: var(--premium-muted);
+  font-size: 14px;
+}
+
+.premium-course-page .premium-back-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--premium-violet-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Unlock card */
+
+.premium-course-page .premium-unlock-card {
+  max-width: 680px;
+  margin: 28px auto;
+}
+
+.premium-course-page .error-banner {
+  padding: 12px 14px;
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   COURSE COMPLETION CERTIFICATE
+   ========================================= */
+
+.premium-course-page .course-certificate-section {
+  margin-top: 30px;
+}
+
+.premium-course-page .certificate-ready-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  background: #f3f0ff;
+  border: 1px solid #ddd6fe;
+  border-radius: 15px;
+}
+
+.premium-course-page .certificate-ready-icon {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  background: var(--premium-violet);
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.premium-course-page .certificate-ready-banner h2 {
+  margin: 0 0 8px;
+  font-size: clamp(21px, 3vw, 28px);
+  line-height: 1.35;
+}
+
+.premium-course-page .certificate-ready-banner p {
+  margin: 0;
+  color: var(--premium-muted);
+  line-height: 1.7;
+}
+
+.premium-course-page .course-certificate {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #fff;
+  border: 3px solid #6d5be8;
+  box-shadow: 0 12px 35px rgba(62, 48, 140, 0.09);
+  text-align: center;
+}
+
+.premium-course-page .certificate-inner-border {
+  padding: clamp(24px, 5vw, 58px) clamp(16px, 4vw, 48px);
+  border: 1px solid #c7bfff;
+}
+
+.premium-course-page .certificate-brand {
+  margin-bottom: 22px;
+  color: var(--premium-violet);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.premium-course-page .certificate-overline {
+  color: #6b5bd2;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.premium-course-page .course-certificate h2 {
+  margin: 16px 0;
+  color: #28204f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(35px, 6vw, 58px);
+  font-weight: 500;
+}
+
+.premium-course-page .certificate-intro,
+.premium-course-page .certificate-description {
+  color: var(--premium-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.premium-course-page .certificate-student {
+  margin: 22px 0;
+  padding-bottom: 12px;
+  color: #4c3db4;
+  border-bottom: 1px solid #d9d2ff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, 4vw, 40px);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.premium-course-page .certificate-course-title {
+  margin: 16px 0;
+  color: #28204f;
+  font-size: clamp(20px, 3vw, 30px);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.premium-course-page .certificate-date {
+  margin-top: 24px;
+  color: var(--premium-muted);
+  font-size: 13px;
+}
+
+.premium-course-page .certificate-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.premium-course-page .certificate-seal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  color: var(--premium-violet);
+  border: 2px solid #8b7cf6;
+  border-radius: 50%;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.premium-course-page .certificate-signature {
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+  padding-top: 8px;
+  border-top: 1px solid #a99df5;
+  text-align: center;
+}
+
+.premium-course-page .certificate-signature span {
+  color: #43358e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-style: italic;
+}
+
+.premium-course-page .certificate-signature small {
+  margin-top: 5px;
+  color: var(--premium-muted);
+  font-size: 11px;
+}
+
+.premium-course-page .certificate-actions {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.premium-course-page .certificate-actions p {
+  color: var(--premium-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 850px) {
+  .premium-course-page .premium-course-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .premium-course-page .premium-syllabus-card {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 520px) {
+  .premium-course-page .premium-lesson-card,
+  .premium-course-page .premium-syllabus-card,
+  .premium-course-page .premium-unlock-card {
+    padding: 18px;
+  }
+
+  .premium-course-page .certificate-ready-banner {
+    padding: 17px;
+  }
+
+  .premium-course-page .certificate-bottom {
+    align-items: center;
+  }
+
+  .premium-course-page .premium-course-footer {
+    gap: 8px;
+  }
+}
+
+/* Print only the certificate, on exactly one landscape page */
+
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  /* make everything invisible, then show only the certificate */
+  body * {
+    visibility: hidden !important;
+  }
+
+  /* take the rest of the page out of the layout so it cannot create a 2nd page */
+  .app-sidebar,
+  .app-header,
+  .mobile-overlay,
+  .premium-course-page .page-intro,
+  .premium-course-page .premium-course-grid,
+  .premium-course-page .certificate-actions,
+  .premium-course-page .certificate-ready-banner {
+    display: none !important;
+  }
+
+  .app-shell,
+  .app-main,
+  .app-content,
+  .premium-course-page,
+  .premium-course-page .course-certificate-section {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .premium-course-page .course-certificate,
+  .premium-course-page .course-certificate * {
+    visibility: visible !important;
+  }
+
+  .premium-course-page .course-certificate {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    width: 100vw;
+    max-width: none;
+    height: 100vh;
+    margin: 0;
+    padding: 8mm;
+    box-sizing: border-box;
+    box-shadow: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .premium-course-page .certificate-inner-border {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8mm 16mm;
+  }
+
+  /* slightly tighter spacing so everything fits one page */
+  .premium-course-page .certificate-brand {
+    margin-bottom: 14px;
+  }
+
+  .premium-course-page .course-certificate h2 {
+    margin: 10px 0;
+    font-size: 46px;
+  }
+
+  .premium-course-page .certificate-student {
+    margin: 14px 0;
+    font-size: 34px;
+  }
+
+  .premium-course-page .certificate-course-title {
+    margin: 10px 0;
+    font-size: 26px;
+  }
+
+  .premium-course-page .certificate-date {
+    margin-top: 14px;
+  }
+
+  .premium-course-page .certificate-bottom {
+    margin-top: 24px;
+  }
+}
+
+
+/* Dashboard analytics charts */
+
+.dashboard-chart-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.dashboard-chart {
+  width: 100%;
+  min-width: 0;
+  margin-top: 16px;
+}
+
+.dashboard-chart .recharts-responsive-container {
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-chart {
+    overflow-x: auto;
+  }
+
+  .dashboard-chart .recharts-responsive-container {
+    min-width: 320px;
+  }
+}
