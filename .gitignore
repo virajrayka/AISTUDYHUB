@@ -5,3 +5,24 @@ dist/
 .env.*
 !.env.example
 *.log
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Credentials and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Dependencies and build output
+node_modules/
+dist/
+build/

@@ -696,13 +696,13 @@ export function PremiumCourseViewer() {
         quality: 0.98,
       },
 
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: "#ffffff",
-        scrollY: 0,
-      },
-
+html2canvas: {
+  scale: 2,
+  useCORS: true,
+  backgroundColor: "#ffffff",
+  scrollY: 0,
+  windowWidth: 1100,
+},
       jsPDF: {
         unit: "mm",
         format: "a4",
@@ -1884,6 +1884,11 @@ export function Planner() {
 </button>
         }
       />
+      {planError && (
+  <p role="alert" className="planner-error">
+    {planError}
+  </p>
+)}
 
       <div className="planner-layout">
         <section className="app-card">
@@ -2301,11 +2306,6 @@ export function Settings() {
         title="Settings"
         text="Manage your profile, password and preferences."
       />
-      {planError && (
-  <p role="alert" className="planner-error">
-    {planError}
-  </p>
-)}
 
       <div className="settings-grid">
         <section className="app-card">
